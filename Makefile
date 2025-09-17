@@ -12,11 +12,17 @@ $(if $(V), $(info AX_ROOT: "$(AX_ROOT)"))
 
 all: build
 
+config_rlk:
+	@python3 .rlk/tools/app-parser.py -c $(APP)/app.toml
+
 chaxroot:
 	@./scripts/set_ax_root.sh $(AX_ROOT)
 
-defconfig oldconfig build run justrun debug disasm disk_img clean clean_c:
-	@make -C $(AX_ROOT) A=$(APP) $@
+defconfig oldconfig run justrun debug disasm disk_img clean clean_c:
+	@make -C $(AX_ROOT) RLK=/workspace/arceos-apps/.rlk A=$(APP) $@
+
+build: config_rlk
+	@make -C $(AX_ROOT) RLK=/workspace/arceos-apps/.rlk A=$(APP) build	
 
 test:
 ifneq ($(filter command line,$(origin A)),)
@@ -25,4 +31,4 @@ else
 	@./scripts/app_test.sh
 endif
 
-.PHONY: all chaxroot defconfig oldconfig build run justrun debug disasm disk_img clean clean_c test
+.PHONY: all chaxroot defconfig oldconfig build run justrun debug disasm disk_img clean clean_c test config_rlk
