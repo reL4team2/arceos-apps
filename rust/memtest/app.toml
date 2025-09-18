@@ -1,0 +1,10 @@
+[[tasks]]
+name = "arceos-memtest"                  # 任务名称
+file = "memtest_aarch64-sel4.elf"        # 要加载的 ELF 文件
+mem = [                                  # 内存映射
+    [
+        "VIRT_PL011_ADDR",               # 虚拟机里的符号/常量
+        "PL011_ADDR",                    # 实际平台的符号/常量
+        "0x1000",                        # 偏移 / 地址
+    ],
+]

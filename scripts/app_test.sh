@@ -79,7 +79,7 @@ function test_one() {
     local args=$1
     local expect="$APP/$2"
     local actual="$APP/actual.out"
-    args="$args ARCH=$ARCH ACCEL=n"
+    args="$args MYPLAT=axplat-aarch64-sel4 ACCEL=n"
     rm -f "$actual"
 
     MSG=

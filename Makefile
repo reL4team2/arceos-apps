@@ -18,11 +18,14 @@ config_rlk:
 chaxroot:
 	@./scripts/set_ax_root.sh $(AX_ROOT)
 
-defconfig oldconfig run justrun debug disasm disk_img clean clean_c:
+defconfig oldconfig justrun debug disasm disk_img clean clean_c:
 	@make -C $(AX_ROOT) RLK=/workspace/arceos-apps/.rlk A=$(APP) $@
 
 build: config_rlk
-	@make -C $(AX_ROOT) RLK=/workspace/arceos-apps/.rlk A=$(APP) build	
+	@make -C $(AX_ROOT) RLK=/workspace/arceos-apps/.rlk A=$(APP) build
+
+run: build
+	@make -C $(AX_ROOT) RLK=/workspace/arceos-apps/.rlk A=$(APP) run
 
 test:
 ifneq ($(filter command line,$(origin A)),)
