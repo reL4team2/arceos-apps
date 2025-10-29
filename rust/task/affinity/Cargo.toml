@@ -10,4 +10,5 @@ sched-rr = ["axstd?/sched-rr"]
 sched-cfs = ["axstd?/sched-cfs"]
 
 [dependencies]
-axstd = { workspace = true, features = ["multitask"], optional = true }
+axstd = { workspace = true, features = ["multitask", "onsel4"], optional = true }
+axplat-aarch64-sel4 = { workspace = true, features = ["smp", "irq"] }

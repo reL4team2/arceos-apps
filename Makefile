@@ -13,7 +13,7 @@ $(if $(V), $(info AX_ROOT: "$(AX_ROOT)"))
 all: build
 
 config_rlk:
-	@python3 .rlk/tools/app-parser.py -c $(APP)/app.toml
+	@python3 .rlk/tools/app-parser.py -c $(APP)/app.toml --single
 
 chaxroot:
 	@./scripts/set_ax_root.sh $(AX_ROOT)
