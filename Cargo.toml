@@ -24,11 +24,11 @@ members = [
 exclude = [".arceos"]
 
 [workspace.dependencies]
-axstd = { git = "https://github.com/reL4team2/arceos.git", rev = "a1a806c" }
-axplat-aarch64-sel4 = { git = "https://github.com/reL4team2/arceos.git", rev = "a1a806c" }
+axstd = { git = "https://github.com/reL4team2/arceos.git", rev = "e9478ee" }
+axplat-aarch64-sel4 = { git = "https://github.com/reL4team2/arceos.git", rev = "e9478ee" }
 
 [patch.crates-io]
-kernel_guard = { git = "https://github.com/croakexciting/kernel_guard.git", rev = "f0c503d" }
+kernel_guard = { git = "https://github.com/reL4team2/arceos.git", rev = "e9478ee" }
 axcpu = { git = "https://github.com/croakexciting/axcpu.git", rev = "d40cb74" }
 percpu = { git = "https://github.com/croakexciting/percpu.git", rev = "8d83e54" }
 percpu_macros = { git = "https://github.com/croakexciting/percpu.git", rev = "8d83e54" }

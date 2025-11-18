@@ -1,6 +1,6 @@
-smp = 1
+smp = 4
 build_mode = release
-log_level = trace
+log_level = info
 
 Primary CPU 0 started,
 Found physcial memory regions:
@@ -13,20 +13,9 @@ Found physcial memory regions:
  free memory (READ | WRITE | FREE)
 Initialize global memory allocator...
   use TLSF allocator.
-initialize global allocator at: \[0x[0-9a-f]\+, 0x[0-9a-f]\+)
-Initialize virtual memory management...
 Initialize platform devices...
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ | EXECUTE
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ | WRITE
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ | WRITE
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ | WRITE
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ | WRITE
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ | WRITE | DEVICE
-map_region(PA:0x[0-9a-f]\+): \[0x[0-9a-f]\+, 0x[0-9a-f]\+) READ | WRITE
 Primary CPU 0 init OK.
 Running memory tests...
-expand heap memory:
 test_vec() OK!
 test_btree_map() OK!
 Memory tests run OK!

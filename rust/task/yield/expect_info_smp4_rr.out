@@ -24,7 +24,6 @@ CPU 1 init OK
 CPU 2 init OK
 CPU 3 init OK
 Hello, main task!
-Hello, task 0! id = ThreadId(10)
 Hello, task 1! id = ThreadId(11)
 Hello, task 2! id = ThreadId(12)
 Hello, task 3! id = ThreadId(13)

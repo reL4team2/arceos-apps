@@ -1,4 +1,4 @@
-smp = 1
+smp = 4
 build_mode = release
 log_level = info
 
@@ -12,7 +12,6 @@ Found physcial memory regions:
  .bss (READ | WRITE | RESERVED)
  free memory (READ | WRITE | FREE)
 Initialize global memory allocator...
-Initialize virtual memory management...
 Initialize platform devices...
 Initialize device drivers...
 registered a new Net device at .\+: "virtio-net"

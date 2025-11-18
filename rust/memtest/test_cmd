@@ -1,1 +1,1 @@
-test_one "LOG=trace FEATURES=paging" "expect_trace.out"
+test_one "SMP=4 LOG=info FEATURES=paging" "expect_trace.out"

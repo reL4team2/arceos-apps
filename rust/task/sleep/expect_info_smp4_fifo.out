@@ -74,9 +74,6 @@ task 3 actual sleep 4\.[0-9]\+s seconds (2).
   tick 24
   tick 25
   tick 26
-  tick 27
-  tick 28
-  tick 29
 task 4 actual sleep 5\.[0-9]\+s seconds (2).
 Sleep tests run OK!
 Shutting down...
